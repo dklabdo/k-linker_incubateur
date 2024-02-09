@@ -3,17 +3,20 @@ import { Route, Routes } from 'react-router-dom'
 import Landing from './pages/Landing'
 import New from './pages/New'
 import Register from './pages/Register'
+import AppProvider from './AppProvider'
 
 function App() {
   
 
   return (
     <>
-      <Routes>
-        <Route path='/' element={<Landing/>} />
-        <Route path='/new' element={<New/>} />
-        <Route path='/registration' element={<Register/>} />
-      </Routes>
+      <AppProvider>
+        <Routes>
+          <Route path='/' element={<Landing/>} />
+          <Route path='/new' element={<New/>} />
+          <Route path='/registration' element={<Register/>} />
+        </Routes>
+      </AppProvider>
       
     </>
   )
