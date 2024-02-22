@@ -42,10 +42,10 @@ function Register() {
     formData.Skills = skils;
     console.log("Form submitted:", formData);
 
-    const url = "https://allami.onrender.com/user/users";
+    const url = "https://versionallami.onrender.com/12/register";
     const options = {
       method: "POST",
-      body: '{\n    "url": "https://allami.onrender.com/user/users",\n    "method": "POST",\n    "body":  formData,\n    }',
+      body: '{\n    "url": "https://versionallami.onrender.com/12/register",\n    "method": "POST",\n    "body":  formData,\n    }',
     };
 
     fetch(url, options)
