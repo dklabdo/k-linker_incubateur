@@ -42,13 +42,13 @@ function Register() {
     formData.Skills = skils;
     console.log("Form submitted:", formData);
 
-    const url = "https://incubat.onrender.com/users";
+    const url = "https://versionallami.onrender.com/register";
     const options = {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: '{\n    "url": "https://incubat.onrender.com/users",\n    "method": "POST",\n    "body":  formData,\n    \n    "headers": {\n        "Content-type": "application/json; charset=UTF-8"\n    }\n}',
+      body: '{\n    "url": "https://versionallami.onrender.com/register",\n    "method": "POST",\n    "body":  formData,\n    \n    "headers": {\n        "Content-type": "application/json; charset=UTF-8"\n    }\n}',
     };
 
     fetch(url, options)
