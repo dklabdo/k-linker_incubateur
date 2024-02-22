@@ -18,7 +18,8 @@ export default {
       },
       colors:{
         'main' : '#DC940F',
-        'bgc' : 'rgb(37, 37, 37)'
+        'bgc' : '#0f0f0f',
+
       },
       fontFamily:{
         'title' : ['Bebas Neue']

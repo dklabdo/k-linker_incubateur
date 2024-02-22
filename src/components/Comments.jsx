@@ -3,7 +3,7 @@ import icon from "../assets/quote.svg";
 import img1 from "../assets/profile1.jpg";
 function Comments() {
   return (
-    <div className="container   w-full gap-3  h-fit flex flex-col justify-between relative md:flex-row">
+    <div className="container my-16  w-full gap-3  h-fit flex flex-col justify-between relative md:flex-row">
       <Card
         profile={img1}
         name="Diab Mohamed"

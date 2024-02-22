@@ -5,7 +5,7 @@ import icon2 from "../assets/telegram.svg";
 import img from "../assets/comment.svg";
 function Comunity() {
   return (
-    <div className="container flex flex-col">
+    <div className="container my-16 mx-auto flex flex-col">
       <h2>Our comunity</h2>
       <Comments />
       <div className=" w-full flex flex-col justify-center items-center">

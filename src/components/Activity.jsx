@@ -21,7 +21,7 @@ function Sectioon({title,text,img}){
                 <h3 className='text-main text-4xl ' >{title} </h3>
                 <p className='text-justify text-white' >{text} </p>
             </div>
-            <img className='size-96 w-full md:w-[50%] rounded-3xl object-cover' src={img} />
+            <img className='size-96 w-full md:w-[40%] rounded-3xl object-cover' src={img} />
         </div>
     )
 }

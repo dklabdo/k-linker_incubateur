@@ -7,7 +7,7 @@ function NavBar() {
   const [selected, setselected] = useState(1);
   const { open, HandleOpenMobileNav } = useContext(AppContext);
   return (
-    <nav className="p-2 flex justify-between items-center">
+    <nav className="z-10 relative px-2 my-2 w-full flex justify-between items-center">
       <img
         src={logo}
         className="w-14 p-2 sm:w-16 m-2 cursor-pointer"

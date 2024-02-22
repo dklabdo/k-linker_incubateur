@@ -7,7 +7,7 @@ import img3 from "../assets/image3.svg";
 import img4 from "../assets/image4.svg";
 function Section1() {
   return (
-    <div className="container md:flex-row xl:flex xl:h-fit xl:bg-white  bg-transparent w-[100%] animate__animated animate__zoomIn animate__fast animate__delay-4s  rounded-3xl items-center  justify-evenly">
+    <div className="my-8 container md:flex-row xl:flex xl:h-fit xl:bg-white  bg-transparent w-[100%] animate__animated animate__zoomIn animate__fast animate__delay-4s  rounded-3xl items-center  justify-evenly">
       <div className="md:flex  md:justify-evenly ">
         <Card
           image={img1}
