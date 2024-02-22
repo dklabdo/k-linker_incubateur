@@ -9,7 +9,7 @@ function Hero() {
           <div className="bg-black/60 h-full flex flex-col justify-center items-center">
             <h1 className="text-center">Kickstarter linker</h1>
             <h3 className="md:text-xl text-base font-mono text-center text-white">
-              <q>It's time nigga for your ideas to meet actions</q>
+              <q>It's time for your ideas to meet actions</q>
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-10 my-6">
               <button onClick={()=>navigate("/registration")} className="bg-main px-4 py-2 text-base rounded-full font-medium">
