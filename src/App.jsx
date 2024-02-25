@@ -12,7 +12,7 @@ function App() {
     <>
       <AppProvider>
         <Routes>
-          <Route path='/' element={<Landing/>} />
+          <Route path='' element={<Landing/>} />
           <Route path='/new' element={<New/>} />
           <Route path='/register' element={<Register/>} />
         </Routes>
