@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Landing/>} />
           <Route path='/new' element={<New/>} />
-          <Route path='/registration' element={<Register/>} />
+          <Route path='/register' element={<Register/>} />
         </Routes>
       </AppProvider>
       

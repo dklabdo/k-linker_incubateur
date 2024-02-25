@@ -33,7 +33,7 @@
         @apply text-main font-bold text-xl my-2 mt-8 ml-2 
     }
     textarea{
-        @apply placeholder:text-white/50 rounded-lg bg-black/50 backdrop-blur-lg h-44 p-2 text-white
+        @apply placeholder:text-white/50 outline-none rounded-lg bg-black/50 backdrop-blur-lg h-44 p-2 text-white
     }
     .skil{
        @apply text-white px-4 py-2 m-2 flex flex-row-reverse items-center gap-2 bg-black/70 backdrop-blur-lg rounded-3xl
@@ -51,7 +51,6 @@
     background-image: url(./assets/comunity.png);
 }
 .bgimg3{
-    background-image: url(./assets/startup.png);
     background-attachment: fixed;
     width: 100%;
     background-size: cover;
@@ -88,22 +87,33 @@ input[type=number]::-webkit-inner-spin-button,
   
 slick-dots {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    width: 90%;
+    margin: 5px 0;
     flex-wrap: wrap; /* Ensure dots wrap to a new row if they exceed the container width */
   }
   
   .slick-dots li {
-    margin: 0px 5px;
+    margin: 0px 0px;
+
+  }
+
+  @media (max-width : 300px){
+
+    .slick-dots li {
+        display: none;
+    
+      }
   }
   
   .slick-dots li button {
     font-size: 20px; /* Change the font size of the dots */
     border: none; /* Remove the border */
-    width: 10px; /* Change the width of the dots */
-    height: 10px; /* Change the height of the dots */
+    width: 6px; /* Change the width of the dots */
+    height: 6px; /* Change the height of the dots */
     border-radius: 50%;
     background-color: rgb(255, 255, 255); /* Change the background color of the dots */
   }

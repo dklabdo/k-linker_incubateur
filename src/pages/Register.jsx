@@ -4,6 +4,7 @@ import cancel from "../assets/close.svg";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import bg from '../assets/startup.png'
 function Register() {
   const s1 = useRef();
   const s2 = useRef();
@@ -39,15 +40,16 @@ function Register() {
   };
   const [Succes, setSuccesfull] = useState(false);
   function Succesfull() {
-    console.log("nkmk");
     setSuccesfull(true);
   }
-  function Valide() {}
+  function Valide() {
+
+  }
 
   const HandleSubmit = async (event) => {
     event.preventDefault(); // Prevent default form submission behavior
     formData.Skills = skils;
-    console.log("Form submitted:", formData);
+    
 
     await axios
       .post("https://versionallami.onrender.com/12/register", formData)
@@ -75,12 +77,14 @@ function Register() {
   const navigate = useNavigate();
 
   return (
-    <div className="bgimg3">
+    <div className="">
+      <img loading="lazy" className="h-screen object-cover fixed bgimg3"  src={bg} alt="..." />
+
       <div className="container mx-auto px-10 md:p-24 flex justify-center  flex-col">
         <img
           onClick={() => navigate("/")}
           src={img}
-          className="w-32 cursor-pointer self-center my-10"
+          className="w-32 z-10 cursor-pointer self-center my-10"
         />
         <form onSubmit={(e) => HandleSubmit(e)} className=" flex flex-col">
           <label className="  ">Name</label>
@@ -299,7 +303,7 @@ function Register() {
             required
           />
           <button
-            className="px-4 py-2 text-black text-lg my-10 w-fit mx-auto rounded-full bg-main"
+            className="px-4 z-10 py-2 text-black text-lg my-10 w-fit mx-auto rounded-full bg-main"
             type="submit"
           >
             Register
@@ -315,8 +319,9 @@ const Alert = () => {
   const navigate = useNavigate();
   Swal.fire({
     icon: "success",
-    title: "Registrztion Succesfull",
-    showConfirmButton: true,
+    title: "Registration Succesfull",
+    showConfirmButton: false,
+    timer : 3000,
     
   }).then((result)=>{
     navigate('/')
