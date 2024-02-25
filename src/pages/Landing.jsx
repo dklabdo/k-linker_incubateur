@@ -10,6 +10,8 @@ import Activity from "../components/Activity";
 import About from "../components/About";
 import Team from "../components/Team";
 import Media from "../components/Media";
+import Footer from "../components/Footer";
+import Contact from "../components/Contact";
 function Landing() {
   const { open, HandleOpenMobileNav } = useContext(AppContext);
   return (
@@ -19,11 +21,16 @@ function Landing() {
         <Hero/>
         <div className="container py-2 px-4 md:px-8  mx-auto">
           <Section1 />
+          <About/>
           <Comunity />
+          <Media/>
           <Activity />
           <Team/>
-          <Media/>
+          <Contact/>
+          
         </div>
+        <Footer />
+        
 
         {open && <MobileNav />}
       </div>

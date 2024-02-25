@@ -3,10 +3,12 @@
 @tailwind utilities;
 
 
-
 @layer components {
+    *{
+        @apply scroll-smooth
+    }
     .navlinks{
-        @apply  py-1 text-base px-3 font-normal transition duration-200 text-white cursor-pointer hover:text-black hover:bg-white  rounded-full
+        @apply  py-1 text-base px-3 font-normal transition duration-200 text-white cursor-pointer hover:text-black hover:bg-main  rounded-full
     }
     .active{
         @apply bg-white text-black
@@ -18,17 +20,17 @@
         @apply text-3xl text-main text-center my-10
     }
     
-    input{
-        @apply placeholder:text-white/50 outline-none focus:border-2  focus:border-white text-white rounded-2xl bg-black/50 backdrop-blur-lg h-12 my-4 appearance-none px-4
+    .input{
+        @apply placeholder:text-white/50 outline-none py-2 focus:border-2  focus:border-white text-white rounded-2xl bg-black/50 backdrop-blur-lg h-12 my-4 appearance-none px-4
     } 
     select{
-        @apply bg-black/50 px-4 outline-none backdrop-blur-lg rounded-2xl p-2 text-white
+        @apply bg-black/50 px-4 py-2 outline-none backdrop-blur-lg rounded-2xl p-2 text-white
     }
     option{
-        @apply placeholder:text-white text-white appearance-none bg-black px-12 outline-none backdrop-blur-lg rounded-2xl
+        @apply placeholder:text-white py-2 text-white appearance-none bg-black px-12 outline-none backdrop-blur-lg rounded-2xl
     }
     label{
-        @apply text-main font-bold text-xl my-2 mt-8 ml-2
+        @apply text-main font-bold text-xl my-2 mt-8 ml-2 
     }
     textarea{
         @apply placeholder:text-white/50 rounded-lg bg-black/50 backdrop-blur-lg h-44 p-2 text-white
@@ -44,15 +46,16 @@
     
 }
 .bgimg{
-    background-image: url(./assets/hero.jpg);
+    background-image: url(./assets/hero.webp);
 }.bgimg2{
-    background-image: url(./assets/comunity.jpg);
+    background-image: url(./assets/comunity.png);
 }
 .bgimg3{
-    background-image: url(./assets/hero.jpg);
+    background-image: url(./assets/startup.png);
     background-attachment: fixed;
     width: 100%;
     background-size: cover;
+    filter: brightness(0.95);
    
 
 }
@@ -82,3 +85,34 @@ input[type=number]::-webkit-inner-spin-button,
 
 
 
+  
+slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Ensure dots wrap to a new row if they exceed the container width */
+  }
+  
+  .slick-dots li {
+    margin: 0px 5px;
+  }
+  
+  .slick-dots li button {
+    font-size: 20px; /* Change the font size of the dots */
+    border: none; /* Remove the border */
+    width: 10px; /* Change the width of the dots */
+    height: 10px; /* Change the height of the dots */
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255); /* Change the background color of the dots */
+  }
+  
+  .slick-dots li.slick-active button {
+    background-color: #333; /* Change the active dot color */
+  }
+
+
+  button::before{
+    display: none;
+  }

@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import arrow from "../assets/left.svg";
 import { AppContext } from "../AppProvider";
+import icon1 from '../assets/facebook.svg'
+import icon2 from '../assets/insta.svg'
+import icon3 from '../assets/linkedin.svg'
 function MobileNav() {
   const { open, HandleOpenMobileNav } = useContext(AppContext);
   return (
@@ -13,11 +16,10 @@ function MobileNav() {
         onClick={() => HandleOpenMobileNav()}
         className="rotate-180 absolute top-0 left-0 p-4 w-16 cursor-pointer"
       />
-      <a className="text-lg cursor-pointer text-white mt-10">Home</a>
-      <a className="text-lg cursor-pointer text-white">About us</a>
-      <a className="text-lg cursor-pointer text-white">Contact us</a>
-      <a className="text-lg cursor-pointer text-white">New</a>
-      <div className="h-[1px] bg-white my-16 w-[70%] "></div>
+      <a href="#home" className="text-lg cursor-pointer text-white mt-10">Home</a>
+      <a href="#about" className="text-lg cursor-pointer text-white">About us</a>
+      <a href="#contact" className="text-lg cursor-pointer text-white">Contact us</a>
+      <div className="h-[1px] bg-white my-32 w-[70%] "></div>
     </div>
   );
 }

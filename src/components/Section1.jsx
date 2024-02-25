@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "animate.css";
-
-import img1 from "../assets/image1.png";
-import img2 from "../assets/image2.png";
+import Aos from "aos";
+import img1 from "../assets/image1.svg";
+import img2 from "../assets/image2.svg";
 import img3 from "../assets/image3.svg";
 import img4 from "../assets/image4.svg";
 function Section1() {
+  useEffect(()=>{
+    Aos.init();
+  },[])
   return (
-    <div className="my-8 container md:flex-row xl:flex xl:h-fit xl:bg-white  bg-transparent w-[100%] animate__animated animate__zoomIn animate__fast animate__delay-4s  rounded-3xl items-center  justify-evenly">
+    <div  className="my-8 container md:flex-row xl:flex xl:h-fit xl:bg-white  bg-transparent w-[100%] rounded-3xl items-center  justify-evenly">
       <div className="md:flex  md:justify-evenly ">
         <Card
           image={img1}
@@ -38,7 +41,7 @@ function Section1() {
 
 function Card({ image, title, desc }) {
   return (
-    <div className=" m-4 md:w-[50%]  flex flex-col xs:h-fit h-44 md:h-56 items-center px-2 md:px-4 py-6 bg-white text-center  rounded-3xl">
+    <div data-aos="zoom-in" data-aos-duration="1000" className=" m-4 md:w-[50%]  flex flex-col xs:h-fit h-44 md:h-56 items-center px-2 md:px-4 py-6 bg-white text-center  rounded-3xl">
       <img
         className="w-18 xs:size-12 size-16 lg:size-20"
         src={image}

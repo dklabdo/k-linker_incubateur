@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import img from "../assets/k-linker_logo.svg";
 import cancel from "../assets/close.svg";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 function Register() {
   const s1 = useRef();
   const s2 = useRef();
@@ -35,15 +37,23 @@ function Register() {
       [name]: value,
     });
   };
+  const [Succes, setSuccesfull] = useState(false);
+  function Succesfull() {
+    console.log("nkmk");
+    setSuccesfull(true);
+  }
+  function Valide() {}
 
-  const HandleSubmit = (event) => {
+  const HandleSubmit = async (event) => {
     event.preventDefault(); // Prevent default form submission behavior
     formData.Skills = skils;
     console.log("Form submitted:", formData);
 
-    axios
+    await axios
       .post("https://versionallami.onrender.com/12/register", formData)
-      .then((res) => console.log(res))
+      .then(() => {
+        Succesfull();
+      })
       .catch((err) => console.error(err));
   };
   function AddSkils(e, val) {
@@ -62,11 +72,16 @@ function Register() {
     const removeSkils = skils.filter((el) => el !== rm);
     setskils(removeSkils);
   }
+  const navigate = useNavigate();
 
   return (
     <div className="bgimg3">
       <div className="container mx-auto px-10 md:p-24 flex justify-center  flex-col">
-        <img src={img} className="w-32 self-center my-10" />
+        <img
+          onClick={() => navigate("/")}
+          src={img}
+          className="w-32 cursor-pointer self-center my-10"
+        />
         <form onSubmit={(e) => HandleSubmit(e)} className=" flex flex-col">
           <label className="  ">Name</label>
           <div className="w-full flex flex-col  gap-4">
@@ -74,9 +89,10 @@ function Register() {
               onChange={HandleChange}
               id="name"
               name="fullname"
-              className="w-full"
+              className="w-full input"
               type="text"
               placeholder="your name"
+              required
             />
           </div>
           <label onChange={HandleChange}>Information</label>
@@ -84,20 +100,26 @@ function Register() {
             onChange={HandleChange}
             name="phonenumber"
             id="info"
+            className="input"
             type="text"
             placeholder="Phone number"
+            required
           />
           <input
             onChange={HandleChange}
             name="email"
             type="email"
             placeholder="e-mail"
+            required
+            className="input"
           />
           <input
             onChange={HandleChange}
             name="idnumber"
             type="text"
             placeholder="student card number"
+            required
+            className="input"
           />
           <label>Grade</label>
           <select name="grade" onChange={HandleChange} id="grade">
@@ -274,6 +296,7 @@ function Register() {
             name="desc"
             placeholder="talk about youself in 100 word"
             className=""
+            required
           />
           <button
             className="px-4 py-2 text-black text-lg my-10 w-fit mx-auto rounded-full bg-main"
@@ -283,8 +306,21 @@ function Register() {
           </button>
         </form>
       </div>
+      {Succes && <Alert />}
     </div>
   );
 }
+
+const Alert = () => {
+  const navigate = useNavigate();
+  Swal.fire({
+    icon: "success",
+    title: "Registrztion Succesfull",
+    showConfirmButton: true,
+    
+  }).then((result)=>{
+    navigate('/')
+  });
+};
 
 export default Register;

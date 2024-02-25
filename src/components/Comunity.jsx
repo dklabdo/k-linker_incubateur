@@ -3,12 +3,16 @@ import Comments from "./Comments";
 import icon1 from "../assets/discord.svg";
 import icon2 from "../assets/telegram.svg";
 import img from "../assets/comment.svg";
+import Aos from "aos";
+import { useEffect } from "react";
+
 function Comunity() {
+  useEffect(()=>{Aos.init()},[])
   return (
     <div className="container my-16 mx-auto flex flex-col">
       <h2>Our comunity</h2>
       <Comments />
-      <div className=" w-full flex flex-col justify-center items-center">
+      <div data-aos="flip-left" data-aos-duration="1500" className=" w-full flex flex-col justify-center items-center">
         
   
         <div className="bgimg2 my-14  h-96 w-full flex flex-col items-center justify-center bg-center brightness-75 rounded-2xl bg-cover">
