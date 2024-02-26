@@ -15,7 +15,7 @@ function Comments() {
       />
       <Card
         profile={img2}
-        name="Brlhimer Ali"
+        name="Belhimer Ali"
         comment="K-linker is the family that accompanies you towards developing your skills in your study and work"
       />
     </div>
@@ -30,7 +30,7 @@ function Card({ profile, comment, name }) {
         <img src={profile} className="size-16 object-cover rounded-full" />
         <h3 className="text-white font-medium ">{name} </h3>
       </div>
-      <p className="text-white text-justify text-sm">{comment}</p>
+      <p className="text-white text-justify text-base lg:text-lg">{comment}</p>
     </div>
   );
 }

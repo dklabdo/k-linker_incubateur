@@ -36,7 +36,7 @@ function Sectioon({ title, text, img }) {
     <div data-aos="zoom-in" data-aos-duration="1000" className="flex flex-col md:flex-row-reverse my-8 justify-between md:odd:flex-row items-center gap-16">
       <div className="flex flex-col gap-4">
         <h3 className="text-main text-4xl ">{title} </h3>
-        <p className="text-justify text-white">{text} </p>
+        <p className="text-justify text-base text-white">{text} </p>
       </div>
       <img
         className="size-96 w-full md:w-[40%] rounded-3xl object-cover"

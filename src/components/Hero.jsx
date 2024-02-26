@@ -17,7 +17,7 @@ function Hero() {
             </h3>
             <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500" className="flex flex-col sm:flex-row gap-4 sm:gap-10 my-6">
               <a  href="https://start-up-linker.onrender.com" className=" border-2 border-main px-12 py-2 text-base shadow-md  hover:bg-main hover:text-black transition shadow-black text-main rounded-full font-bold">
-                Join k-linker
+                Join start-up linker
               </a>
             </div>
           </div>
