@@ -18,7 +18,7 @@ function Team() {
   useEffect(()=>{Aos.init()},[])
 
   return (
-    <div data-aos="zoom-in" data-aos-duration="1000" className="mb-32">
+    <div data-aos="zoom-in" data-aos-duration="1000" className="mb-4 md:mb-32">
       <h2 className="">Our team</h2>
       <div className="hidden md:grid relative mx-auto md:grid-cols-2 lg:grid-cols-3   grid-cols-1   overflow-y-hidden h-fit ">
         <ProfileCard
