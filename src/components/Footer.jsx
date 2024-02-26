@@ -20,7 +20,7 @@ function Footer() {
           </div>
           <div className="flex text-nowrap self-center gap-2  sm:mb-0 sm:self-start">
             <img src={icon3} alt="..." />
-            <a href="" className="underline">CS department CPR</a>
+            <a href="https://maps.app.goo.gl/w396pRvhgamTyuq88" className="underline">CS department CPR</a>
           </div>
         </div>
         <div className="sm:w-1/2 flex  justify-center items-center">
