@@ -13,11 +13,12 @@ import img5 from '../assets/team/img5.jpg'
 import img6 from '../assets/team/img6.jpg'
 import img7 from '../assets/team/img7.jpg'
 import img8 from '../assets/team/img8.jpg'
+import img9 from '../assets/team/img9.jpg'
 function Team() {
   useEffect(()=>{Aos.init()},[])
 
   return (
-    <div data-aos="zoom-in" data-aos-duration="1000" className="mb-48">
+    <div data-aos="zoom-in" data-aos-duration="1000" className="mb-32">
       <h2 className="">Our team</h2>
       <div className="hidden md:grid relative mx-auto md:grid-cols-2 lg:grid-cols-3   grid-cols-1   overflow-y-hidden h-fit ">
         <ProfileCard
@@ -25,6 +26,18 @@ function Team() {
           name="Sayah Abdel-ilah"
           post="Club president"
           job="front-end web developer"
+        />
+        <ProfileCard
+          img={img6}
+          name="Bouanani rania"
+          post="vice-president"
+          job="Back-end developer"
+        />
+        <ProfileCard
+          img={img9}
+          name="Dib Abdelkarim"
+          post="Externel relation"
+          
         />
         <ProfileCard
           img={img2}
@@ -43,12 +56,7 @@ function Team() {
           name="Amrani heithem"
           post="Back-end developer"
         />
-        <ProfileCard
-          img={img6}
-          name="Bouanani rania"
-          post="vice-president"
-          job="ui/ux designer"
-        />
+        
         <ProfileCard
           img={img7}
           name="Benharrat walid"
@@ -60,7 +68,7 @@ function Team() {
           img={img8}
           name="Mehamdi soufiane"
           post="Production"
-          job="Photographe"
+          job="Photographer"
         />
       </div>
       <MobileSlider/>
@@ -109,6 +117,18 @@ function MobileSlider() {
           job="front-end web developer"
         />
         <ProfileCard
+          img={img6}
+          name="Bouanani rania"
+          post="vice-president"
+          job="Back-end developer"
+        />
+        <ProfileCard
+          img={img9}
+          name="Dib Abdelkarim"
+          post="Externel relation"
+          
+        />
+        <ProfileCard
           img={img2}
           name="Moumine Rayane"
           post="Dev team leader"
@@ -125,12 +145,7 @@ function MobileSlider() {
           name="Amrani heithem"
           post="Back-end developer"
         />
-        <ProfileCard
-          img={img6}
-          name="Bouanani rania"
-          post="vice-president"
-          job="ui/ux designer"
-        />
+        
         <ProfileCard
           img={img7}
           name="Benharrat walid"

@@ -50,14 +50,7 @@
 }.bgimg2{
     background-image: url(./assets/comunity.png);
 }
-.bgimg3{
-    background-attachment: fixed;
-    width: 100%;
-    background-size: cover;
-    filter: brightness(0.95);
-   
 
-}
 .shadowmain{
     text-shadow: 25px 10px 50px #DC940F;
 }

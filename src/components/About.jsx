@@ -1,5 +1,4 @@
 import React from "react";
-import img from "../assets/startup.png";
 import { useEffect } from "react";
 import Aos from "aos";
 function About() {

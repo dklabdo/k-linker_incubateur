@@ -16,9 +16,9 @@ function Media() {
         follow us on our social media account to khnow about our latest event
       </p>
       <div className="flex flex-col items-center md:flex-row md:flex-grow gap-8 justify-center my-8 ">
-        <MediaCard link={1} img={icon1} content="klinker_sc" />
+        <MediaCard link={1} img={icon1} content="k-linker SC" />
         <MediaCard link={2} img={icon2} content="klinker_sc" />
-        <MediaCard link={3} img={icon3} content="k-linker sc" />
+        <MediaCard link={3} img={icon3} content="K-linker SC" />
       </div>
     </div>
   );

@@ -27,8 +27,8 @@ function Contact() {
   };
 
   return (
-    <div id="contact" data-aos="zoom-in" data-aos-duration="1000" className="w-full mb-32">
-      <h1 className="text-center mb-24">Contact us</h1>
+    <div id="contact" data-aos="zoom-in" data-aos-duration="1000" className="w-full mb-12">
+      <h1 className="text-center mb-12">Contact us</h1>
       <div className="flex flex-col-reverse lg:flex-row  gap-[10%] p-4">
         
         <form
